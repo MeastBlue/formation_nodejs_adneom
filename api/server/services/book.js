@@ -10,7 +10,7 @@ export default class  {
     }
   
     static async addBook(newBook) {
-      console.log(newBook)
+      
       try {
         return await db.Book.create(newBook);
       } catch (error) {
