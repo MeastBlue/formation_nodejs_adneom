@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node ./api/index.js",
-    "test": "export NODE_ENV=test &&  sequelize db:migrate:undo:all  && sequelize db:migrate  && nyc --require @babel/register  mocha ./api/server/test/book.js --timeout 20000 --exit"
+    "test": "export NODE_ENV=test &&  nyc --require @babel/register  mocha ./api/server/tests/book.js --timeout 20000 --exit"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +28,7 @@
     "@babel/register": "^7.12.1",
     "@babel/runtime": "^7.12.1",
     "babel-loader": "^8.1.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "eslint": "^7.11.0",
